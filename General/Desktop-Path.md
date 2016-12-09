@@ -1,10 +1,10 @@
 ```vb
-Sub DskPath()
-    Debug.Print CreateObject("WSCript.shell").SpecialFolders("Desktop")
-End Sub
+Public Function DskPath() As String
+    Let DskPath = CStr(CreateObject("WSCript.shell").SpecialFolders("Desktop"))
+End Function
 ```
 
-The `SpecialFolders` property could return the path for may folders in Windows system, including:
+The `SpecialFolders` property could return the path for many folders in Windows system, including:
 - AllUsersDesktop
 - AllUsersStartMenu
 - AllUsersPrograms
